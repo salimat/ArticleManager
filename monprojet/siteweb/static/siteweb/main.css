@@ -1,0 +1,162 @@
+.portfolio{
+	width:750px;
+	background:#fff;
+	padding-top:5px;
+}
+/* Navigation */
+.portfolio nav{
+	width:30px;
+	position:fixed;
+	top:10%;
+	left:-15px;
+}
+.portfolio nav ul{
+	list-style-type:none;
+	position:relative;
+}
+.portfolio nav ul li{
+	cursor:pointer;
+	text-align:center;
+	padding-top:7px;
+	display: inline-block;
+	vertical-align: bottom;
+	-webkit-transform: scale(1.25);
+	margin: 20px 0px;
+	width: 40px;
+	height: 32px;
+	line-height: 1.6;
+	font-size: 18px;
+	color: #e1dada;
+	text-shadow: 0px -1px 1px rgba(0,0,0,0.2);
+	border-radius: 100px;
+	text-decoration: none;
+	background-image: 		-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#e3e3e3));
+	background-image: 		-moz-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#e3e3e3));
+
+	box-shadow:     		0px 0px 2px rgba(0,0,0,0.25),
+							10px 10px 15px #e3e3e3,
+						   -10px 10px 15px #e3e3e3,
+						   -15px -15px 15px rgba(255,255,255,0.4),
+							15px -15px 15px rgba(255,255,255,0.4),
+					  inset 0px 2px 0px #fff;
+
+	-webkit-transition: 	box-shadow 0.3s ease-in-out,
+							background-image 0.3s ease-in-out,
+							text-shadow 0.5s linear,
+							color 0.5s linear;
+    -moz-transition: 		box-shadow 0.3s ease-in-out,
+							background-image 0.3s ease-in-out,
+							text-shadow 0.5s linear,
+							color 0.5s linear;
+}
+.portfolio nav ul li.active {
+    color: #00d0b0;
+    text-shadow: 0px 0px 7px lighten(#00d07f, 20%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3e3e3), color-stop(100%,#f4f4f4));
+    background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%,#e3e3e3), color-stop(100%,#f4f4f4));
+    box-shadow:     		0px 0px 3px rgba(0,0,0,0.15),
+							10px 10px 15px rgba(255,255,255,0.4),
+						   -10px 10px 15px rgba(255,255,255,0.4),
+						   -10px -10px 15px #e3e3e3,
+							10px -10px 15px #e3e3e3,
+					   inset 0px -3px 0px rgba(255,255,255,0.4),
+					   inset 0px 3px 3px rgba(0,0,0,0.04);
+}
+/* Source: Quite realistic buttons https://codepen.io/minustalent/pen/GzuCa */
+
+.portfolio nav ul li i{
+	margin-top:5px;
+}
+.portfolio nav ul li#all{
+	color:#99938E;
+}
+.portfolio nav ul li#web{
+	color:#F5F073;
+}
+.portfolio nav ul li#projets{
+	color:#4A8998;
+}
+.portfolio nav ul li#logo{
+	color:#D38D47;
+}
+/* Portfolio */
+.portfolio .work figure {
+	position:relative;
+	left:70px;
+	margin-bottom:25px;
+	background-image: 		-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#e3e3e3));
+	background-image: 		-moz-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#e3e3e3));
+	box-shadow:     		0px 0px 2px rgba(0,0,0,0.25),
+							10px 10px 15px #e3e3e3,
+						   -10px 10px 15px #e3e3e3,
+						   -15px -15px 15px rgba(255,255,255,0.4),
+							15px -15px 15px rgba(255,255,255,0.4),
+					  inset 0px 2px 0px #fff;
+}
+.portfolio .work figure img{
+	width:40%;
+	display:inline-block;
+}
+
+.portfolio .work figure p a{
+	padding:1px 8px;
+	background-color:#333;
+	border:1px solid #fff;
+	border-radius:10px;
+	color:#fff;
+	font-size:0.8em;
+	text-decoration:none;
+
+}
+.portfolio .work figure p a:hover{
+	background-color:#555;
+}
+.portfolio .work figure p{
+	width: calc(50% - 20px);
+	display:inline-block;
+	vertical-align:top;
+	padding:26px ;
+    margin-left:25px;
+	/*background: #f3f3f3;*/
+	position: relative;
+	color:#333;
+	text-shadow:1px 1px 1px rgba(150,150,150,0.5);
+}
+.portfolio .work figure.web p{
+	border-left:4px solid #F5F073;
+}
+.portfolio .work figure p:before{
+	position:absolute;
+	width:50px;
+	height:20px;
+	border:1px solid #F5F073;
+	color:#333;
+	top:0;
+	font-family: sans-serif;
+	left:-1px;
+	font-size:0.7em;
+	line-height:1.8em;
+	background:#ddd;
+	text-align:center;
+	vertical-align:middle;
+	box-shadow:inset 1px 1px 4px rgba(190,190,190,0.8);
+	border-radius:0 5px 5px 0;
+}
+.portfolio .work figure.web p:before{
+	content:"Article";
+	border:1px solid #F5F073;
+}
+.portfolio .work figure.projets p:before{
+	content:"projets";
+	border:1px solid #4A8998;
+}
+.portfolio .work figure.logo p:before{
+	content:"logo";
+	border:1px solid #D38D47;
+}
+.portfolio .work figure.projets p{
+	border-left:2px solid #4A8998;
+}
+.portfolio .work figure.logo p{
+	border-left:2px solid #D38D47;
+}

@@ -1,0 +1,48 @@
+
+<!DOCTYPE HTML>
+	<head>
+		<title>Article</title>
+    {% load static %}
+		<meta charset="utf-8" />
+	  <link rel="stylesheet" type="text/css" href="{% static 'siteweb/main.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'siteweb/connexion.css' %}">
+    <link rel="stylesheet" type="text/JavaScript" href="{% static 'siteweb/nouveau.js' %}">
+		<link rel="stylesheet" type="text/JavaScript" href="{% static 'siteweb/recherche.js' %}">
+
+	</head>
+
+
+	<body class="is-preload">
+
+
+		<div class="pe-connect">
+			<a href="{% url 'admin:login' %}"type="button" class="button-pe-connect is-white" >
+				<span class="text">Administrateur Site</span>
+			</a>
+		</div>
+
+			<div class="portfolio">
+						<nav>
+							<ul>
+								<li id="all" class="active"><!--All<br>--><i class="fa fa-th"></i></li>
+								<li id="web"><!--Web<br>--><i class="fa fa-code"></i></li>
+								<!--<li id="print">Print<br><i class="fa fa-th"></i></li>-->
+								<li id="projets"><!--Projets<br>--><i class="fa fa-flask"></i></li>
+								<li id="logo"><!--Logo<br>--><i class="fa fa-picture-o"></i></li>
+							</ul>
+						</nav>
+						<section class="work">
+{% for article in object_list %}
+							<figure class="web" id="fig">
+								<img src="{{ article.photo.url}}" alt="{{ article.titre }}" class="zoom"  />
+								<p><strong>{{ article.titre }}</strong><br>
+								<i>Description:</i> {{ article.description }}&eacute;<br>
+								<br>
+								<i>Tag:</i> <small> <i class="fa fa-html5"></i>, <i class="fa fa-css3"></i>, <i class="fa fa-android"></i>, <i class="fa fa-apple"></i>{{ article.tag}}</small>
+								</p>
+							</figure>
+		{% endfor %}
+
+</body>
+
+</html>
